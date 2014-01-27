@@ -2,9 +2,12 @@ extends layout
 
 block content
   h1 #{title}
-  h1 No ultimo episodio:
-  p #{prev}
-  h1 Evento #{turn}:
-  .Imagem
-  p #{evento} 
-  button Sorte ou Reves?
+  h2 No ultimo episodio:
+  p #{outcome.text}
+  img(src=outcome.img, height="80", width="80")
+  h2 Agora:
+  p #{event.text} 
+  img(src=event.img, height="80", width="80")
+  br
+  br
+  button(onclick="location.href='http://localhost:3000/game/#{event.num}';") Sorte ou Reves?
