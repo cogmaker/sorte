@@ -15,7 +15,7 @@ console.log("events: " + storage.getItem('events'));
  
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Sorte ou Revez',prev: 'aaa' });
+  res.render('first');
 };
 
 exports.init = function(req, res){
@@ -58,13 +58,17 @@ exports.turn = function(req, res) {
   if(prev > events.length || prev < 0)
     res.render('init')
   var dado = Math.floor(Math.random()*2)//0 ou 1: 0 azar, 1 sorte
-  if(dado == 1)
+  if(dado == 1){
     var outcome = events[prev].sorte
-  if(dado == 0)
+    var status = "Sorte"
+  }
+  if(dado == 0){
     var outcome = events[prev].reves 
-    
+    var status = "Reves"
+  }  
   res.render('index', { title: 'Sorte ou Reves?',
                         outcome: outcome,
-                        event: event			 
+                        event: event,
+                        status: status			 
             });
 };
