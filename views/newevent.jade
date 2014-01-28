@@ -1,0 +1,21 @@
+extends layout
+
+mixin textfield(name, label)
+  p
+    label(for='#{name}') #{label}:
+      input(type='text', name='#{name}')
+
+block content
+  form(method='post', action='/new')
+    fieldset
+      legend Adicionar novo evento
+      
+      +textfield("event[text]","Descrição evento")
+      +textfield("event[img]","URL da imagem do evento")
+      +textfield("sorte[text]","Descrição Sorte")
+      +textfield("sorte[img]","URL da imagem da Sorte")
+      +textfield("reves[text]","Descrição Reves")
+      +textfield("reves[img]","URL da imagem do Reves")
+      
+      input(type='submit', value='Submit')
+

@@ -16,7 +16,7 @@ events.push({"num":"0",//ler tam do bd
 "img":"http://2.bp.blogspot.com/-3SKoBSklqGI/UaDPID_bhII/AAAAAAAAD_U/XSF6H-jxTRk/s1600/dragao.jpg",
 "sorte":{
  "text":"voce matou ele", "img":"http://wiki.advfn.com/images/br/a/a1/Ouro.png"},
-"azar":{
+"reves":{
  "text":"voce morreu", "img":"http://1.bp.blogspot.com/-6NLCUCgL148/UEEC4OmTmiI/AAAAAAAAC58/Erofb1Ynudw/s1600/fotos+de+esqueletos+05.jpg"}
 });
 
